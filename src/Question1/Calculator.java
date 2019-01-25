@@ -45,10 +45,12 @@ public class Calculator {
     public double rootOfNumber(double firstNum){
         this.firstNum = firstNum;
 
-        try{
+        try
+        {
             this.ans = Math.sqrt(firstNum);
         }
-        catch (ArithmeticException e){
+        catch (ArithmeticException e)
+        {
             System.out.println("Sorry, can't determine the square root of a negative number");
         }
 
@@ -57,7 +59,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator cal1= new Calculator();
-        System.out.println(cal1.divideNumbers(1.0,0.0));
+        System.out.println(cal1.divideNumbers(10,0));
         System.out.println(cal1.rootOfNumber(-8));
         System.out.println(cal1.squareNumber(-5));
 
