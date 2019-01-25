@@ -22,17 +22,44 @@ public class Calculator {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
 
-        try{
+        try
+        {
             this.ans = firstNum/secondNum;
         }
-        catch (ArithmeticException e){
+        catch (ArithmeticException e)
+        {
             System.out.println("Sorry, can't divide " + firstNum + " by 0");
         }
 
-        return ans;
+        return this.ans;
+    }
+
+    public double squareNumber(double firstNum){
+        this.firstNum = firstNum;
+
+        this.ans = firstNum*firstNum;
+
+        return this.ans;
+    }
+
+    public double rootOfNumber(double firstNum){
+        this.firstNum = firstNum;
+
+        try{
+            this.ans = Math.sqrt(firstNum);
+        }
+        catch (ArithmeticException e){
+            System.out.println("Sorry, can't determine the square root of a negative number");
+        }
+
+        return this.ans;
     }
 
     public static void main(String[] args) {
+        Calculator cal1= new Calculator();
+        System.out.println(cal1.divideNumbers(1.0,0.0));
+        System.out.println(cal1.rootOfNumber(-8));
+        System.out.println(cal1.squareNumber(-5));
 
     }
 
