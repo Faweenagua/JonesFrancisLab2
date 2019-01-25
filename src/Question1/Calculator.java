@@ -18,6 +18,20 @@ public class Calculator {
 
     Scanner sc = new Scanner(System.in);
 
+    public double divideNumbers(double firstNum, double secondNum){
+        this.firstNum = firstNum;
+        this.secondNum = secondNum;
+
+        try{
+            this.ans = firstNum/secondNum;
+        }
+        catch (ArithmeticException e){
+            System.out.println("Sorry, can't divide " + firstNum + " by 0");
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
 
     }
